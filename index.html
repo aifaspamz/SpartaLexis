@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
-    <meta name="description"
-      content="SpartaLexis: Master online survival with AI misinformation defense, phishing tactics, and cybersecurity training.">
-    <meta name="keywords" content="cybersecurity, AI misinformation, phishing, online safety, MFA, deepfakes">
   </head>
 
   <body>
@@ -21,9 +18,9 @@
         <span class="logo-text">Sparta<span class="accent">Lexis</span></span>
       </a>
 
-      <button class="hamburger" aria-label="Menu">☰</button>
+      <button class="hamburger" aria-label="Menu" aria-controls="primary-navigation" aria-expanded="false">☰</button>
 
-      <nav class="nav-links">
+      <nav id="primary-navigation" class="nav-links" aria-hidden="true">
         <a href="#" class="active">Home</a>
         <a href="digilit.html">DigiLexis</a>
         <a href="cysec.html">CyberLexis</a>
@@ -170,12 +167,50 @@
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
     <script>
-      const hamburger = document.querySelector(".hamburger");
-      const navLinks = document.querySelector(".nav-links");
+      (function () {
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav-links');
+        if (!hamburger || !nav) return;
 
-      hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("show");
-      });
+        const links = Array.from(nav.querySelectorAll('a'));
+
+        function openNav() {
+          nav.classList.add('show');
+          hamburger.setAttribute('aria-expanded', 'true');
+          nav.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeNav() {
+          nav.classList.remove('show');
+          hamburger.setAttribute('aria-expanded', 'false');
+          nav.setAttribute('aria-hidden', 'true');
+        }
+
+        hamburger.addEventListener('click', (e) => {
+          const opened = nav.classList.toggle('show');
+          hamburger.setAttribute('aria-expanded', opened ? 'true' : 'false');
+          nav.setAttribute('aria-hidden', opened ? 'false' : 'true');
+        });
+
+        links.forEach((a) => {
+          a.addEventListener('click', () => {
+            if (nav.classList.contains('show')) closeNav();
+          });
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!nav.contains(e.target) && !hamburger.contains(e.target) && nav.classList.contains('show')) {
+            closeNav();
+          }
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && nav.classList.contains('show')) {
+            closeNav();
+            hamburger.focus();
+          }
+        });
+      })();
     </script>
 
 

@@ -57,9 +57,7 @@
   align-items: center;
   margin-bottom: 50px;
   width: 100%;
-  /* FIXED: allow full width */
   padding: 0 20px;
-  /* add spacing on small screens */
 }
 
  .center-logo {
@@ -89,9 +87,7 @@
 
 .wrapper {
   width: 100%;
-  /* FIXED: responsive width */
   max-width: 420px;
-  /* limit it on large screens */
   background: transparent;
   border: 2px solid hsla(0, 0%, 65%, 0.158);
   box-shadow: 0 0 36px 1px rgba(0, 0, 0, 0.2);
@@ -279,7 +275,6 @@
  @media (max-width: 480px) {
    .wrapper {
      padding: 25px 20px;
-     /* reduce padding for small screens */
    }
 
    .input-box input {
@@ -293,6 +288,5 @@
 
    .title {
      font-size: 24px;
-     /* make logo responsive */
    }
  }

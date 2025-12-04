@@ -4,7 +4,6 @@
   --white: #ffffff;
   --dark: #000000;
   --muted: rgba(255, 255, 255, 0.85);
-
   --font-main: 'Poppins', sans-serif;
   --font-heading: 'Orbitron', sans-serif;
 }
@@ -34,9 +33,6 @@ body {
   border-radius: 0 0 20px 20px;
 }
 
-/* --------------------------------------------------
-   HEADER
--------------------------------------------------- */
 .header-bar {
   position: fixed;
   top: 0;
@@ -51,7 +47,6 @@ body {
   z-index: 1000;
 }
 
-/* logo */
 .logo {
   font-family: var(--font-heading);
   font-size: 26px;
@@ -81,7 +76,6 @@ body {
   height: auto;
 }
 
-/* nav links */
 .nav-links {
   display: flex;
   align-items: center;
@@ -106,7 +100,6 @@ body {
   padding-bottom: 3px;
 }
 
-/* Start Learning button */
 .nav-start-btn {
   background: var(--red);
   padding: 10px 18px;
@@ -121,7 +114,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* mobile menu */
 .hamburger {
   display: none;
   font-size: 28px;
@@ -130,7 +122,6 @@ body {
   border: none;
 }
 
-/* mobile layout */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -154,42 +145,35 @@ body {
   }
 }
 
-/* --- INTRO SECTION (Hero) --- */
 .intro-section {
   text-align: center;
   padding-top: 90px;
-  /* Use a deep, dark color or transparent for blending with body BG */
   background-color: transparent;
   color: #E5E7EB;
 }
 
 .intro-section h1 {
   font-size: 2.5em;
-  font-family: var(--font-heading) !important;
+  font-family: var(--font-heading);
   margin-bottom: 10px;
-  /* Highlight Text with Accent Glow */
   color: #00D0FF;
 }
 
 .intro-section p {
   font-size: 1.2em;
   color: #9ca3af;
-  /* Muted contrast text */
 }
 
-/* --- MAIN CONTAINER --- */
 .main-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* --- TEAM VALUES SECTION --- */
 .team-values {
   text-align: center;
   margin-bottom: 40px;
   padding: 20px;
-  /* Apply Glassmorphism Background */
   background-color: rgba(8, 16, 35, 0.75);
   backdrop-filter: blur(8px);
   border-radius: 8px;
@@ -198,17 +182,13 @@ body {
 
 .team-values h2 {
   margin-bottom: 10px;
-  /* Use Accent Glow */
   color: #00D0FF;
 }
 
-/* Ensure the text inside the glass panel is readable */
 .team-values p {
   color: #E5E7EB;
 }
 
-
-/* --- TEAM CARDS SECTION --- */
 .team-cards {
   display: flex;
   flex-wrap: wrap;
@@ -221,7 +201,6 @@ body {
   position: relative;
   width: 300px;
   height: 400px;
-  /* Team Card Background (Darker Glass) */
   background: rgba(8, 16, 35, 0.9);
   border-radius: 20px;
   overflow: hidden;
@@ -230,13 +209,11 @@ body {
   justify-content: center;
   align-items: center;
   transition: 0.5s;
-  /* Subtle Accent Border */
   border: 1px solid rgba(0, 208, 255, 0.1);
 }
 
 .card:hover {
   transform: translateY(-10px);
-  /* Accent Glow Shadow on Hover */
   box-shadow: 0 0 40px rgba(0, 208, 255, 0.3);
 }
 
@@ -257,7 +234,6 @@ body {
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
-  /* Contrast Border */
   border: 10px solid rgba(229, 231, 235, 0.1);
 }
 
@@ -271,7 +247,6 @@ body {
 }
 
 .card .content .contentBox h3 {
-  /* Header color (Primary Text) */
   color: #E5E7EB;
   font-size: 1.5em;
   font-weight: 500;
@@ -282,13 +257,11 @@ body {
 .card .content .contentBox span {
   font-size: 0.8em;
   font-weight: 300;
-  /* Accent Glow for Title */
   color: #00D0FF;
 }
 
 .card .content .contentBox p {
   font-size: 0.9em;
-  /* Muted Text */
   color: #9ca3af;
   margin-top: 10px;
 }
@@ -314,18 +287,15 @@ body {
 }
 
 .card .sci li a {
-  /* Social Icon Color (Primary Text) */
   color: #E5E7EB;
   font-size: 24px;
   transition: 0.3s;
 }
 
 .card .sci li a:hover {
-  /* Accent Glow on Social Hover */
   color: #00D0FF;
 }
 
-/* Screen Reader Only - No change */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -338,11 +308,9 @@ body {
   border: 0;
 }
 
-/* --- ACHIEVEMENTS SECTION --- */
 .achievements {
   margin-bottom: 40px;
   padding: 20px;
-  /* Apply Glassmorphism Background */
   background-color: rgba(8, 16, 35, 0.75);
   backdrop-filter: blur(8px);
   border-radius: 8px;
@@ -351,7 +319,6 @@ body {
 
 .achievements h2 {
   margin-bottom: 15px;
-  /* Accent Glow */
   color: #00D0FF;
 }
 
@@ -359,53 +326,43 @@ body {
   list-style: disc;
   padding-left: 20px;
   color: #9ca3af;
-  /* Muted text */
 }
 
 .achievements li {
   margin-bottom: 10px;
   color: #E5E7EB;
-  /* Main text color */
 }
 
-/* --- JOIN TEAM SECTION --- */
 .join-team {
   text-align: center;
   margin-bottom: 40px;
   padding: 20px;
-  /* Use a secondary dark shade for contrast */
   background-color: rgba(0, 208, 255, 0.1);
   border-radius: 8px;
 }
 
 .join-team h2 {
   margin-bottom: 10px;
-  /* Accent Glow */
   color: #00D0FF;
 }
 
 .cta-button {
   display: inline-block;
   padding: 10px 20px;
-  /* Authority/Action Red */
   background-color: #D43C40;
   color: #E5E7EB;
   border-radius: 5px;
   transition: background-color 0.3s;
   box-shadow: 0 0 10px rgba(212, 60, 64, 0.5);
-  /* Red glow */
 }
 
 .cta-button:hover {
-  /* Warning/Danger on Hover */
   background-color: #FF6347;
 }
 
-/* --- CONTACT FORM SECTION --- */
 .contact-form {
   margin-bottom: 40px;
   padding: 20px;
-  /* Apply Glassmorphism Background */
   background-color: rgba(8, 16, 35, 0.75);
   backdrop-filter: blur(8px);
   border-radius: 8px;
@@ -417,13 +374,11 @@ body {
 
 .contact-form h2 {
   margin-bottom: 10px;
-  /* Accent Glow */
   color: #00D0FF;
 }
 
 .contact-form p {
   margin-bottom: 20px;
-  /* Muted Text */
   color: #9ca3af;
 }
 
@@ -436,14 +391,12 @@ body {
   margin-bottom: 5px;
   font-weight: bold;
   color: #E5E7EB;
-  /* Primary Text */
 }
 
 .contact-form input,
 .contact-form textarea {
   margin-bottom: 15px;
   padding: 10px;
-  /* Dark input fields for dark theme */
   background-color: rgba(229, 231, 235, 0.1);
   border: 1px solid rgba(0, 208, 255, 0.2);
   border-radius: 5px;
@@ -453,7 +406,6 @@ body {
 
 .contact-form button {
   padding: 10px;
-  /* Authority/Action Red */
   background-color: #D43C40;
   color: #E5E7EB;
   border: none;
@@ -464,11 +416,9 @@ body {
 }
 
 .contact-form button:hover {
-  /* Warning/Danger on Hover */
   background-color: #FF6347;
 }
 
-/* --- FOOTER --- */
 footer {
   background: url("images/footer.jpg") center/cover;
   padding: 0.3rem 0 0.3rem;
@@ -486,7 +436,6 @@ footer::before {
   z-index: -1;
 }
 
-/* LAYOUT: 3 COLUMNS BALANCED */
 .footer-grid {
   max-width: 1200px;
   margin: auto;
@@ -497,7 +446,6 @@ footer::before {
   gap: 2rem;
 }
 
-/* LEFT COLUMN: QUICK ACTION */
 .footer-left h3,
 .footer-right h3 {
   font-family: var(--font-heading);
@@ -528,7 +476,6 @@ footer::before {
   color: var(--accent);
 }
 
-/* CENTER: LOGO + TAGLINE */
 .footer-center {
   text-align: center;
   margin-top: -0.5rem;
@@ -552,7 +499,6 @@ footer::before {
   margin-bottom: 10px;
 }
 
-/* RIGHT COLUMN: NEWSLETTER */
 .footer-right {
   text-align: right;
 }
@@ -601,7 +547,6 @@ footer::before {
   box-shadow: 0 0 16px rgba(0, 255, 255, 0.7);
 }
 
-/* COPYRIGHT */
 .footer-bottom {
   text-align: center;
   margin-top: 0.3rem;
@@ -625,9 +570,6 @@ footer::before {
   color: var(--accent);
 }
 
-/* ============================================================
-   SCROLL REVEAL ANIMATION
-============================================================ */
 .reveal {
   opacity: 0;
   transform: translateY(22px);
@@ -639,9 +581,6 @@ footer::before {
   transform: translateY(0);
 }
 
-/* ============================================================
-   RESPONSIVE
-============================================================ */
 @media (max-width: 900px) {
   .hero-text {
     padding: 2.4rem 2rem;
@@ -649,8 +588,6 @@ footer::before {
 }
 
 @media (max-width: 850px) {
-
-  /* STACK FOOTER IN THE CORRECT ORDER */
   .footer-grid {
     display: flex;
     flex-direction: column;

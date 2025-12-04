@@ -1,322 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CyberLexis | SpartaLexis</title>
-
-    <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="cysec.css">
-  </head>
+</head>
 
-
-  <body>
-
-    <!-- HEADER -->
+<body>
     <header class="header-bar">
-      <a href="index.html" class="logo">
-        <img src="images/sparta-logo.png" alt="SpartaLexis Logo">
-        <span class="logo-text">Sparta<span class="accent">Lexis</span></span>
-      </a>
+        <a href="index.html" class="logo">
+            <img src="images/sparta-logo.png" alt="SpartaLexis Logo">
+            <span class="logo-text">Sparta<span class="accent">Lexis</span></span>
+        </a>
 
-      <button class="hamburger" aria-label="Menu">☰</button>
+        <button class="hamburger" aria-label="Menu" aria-controls="primary-navigation" aria-expanded="false">☰</button>
 
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="digilit.html">DigiLexis</a>
-        <a href="#" class="active">CyberLexis</a>
-        <a href="team.html">Our Team</a>
-        <a href="form.html" class="nav-start-btn">Sign Out</a>
-      </nav>
+        <nav id="primary-navigation" class="nav-links" aria-hidden="true">
+            <a href="index.html">Home</a>
+            <a href="digilit.html">DigiLexis</a>
+            <a href="#" class="active">CyberLexis</a>
+            <a href="team.html">Our Team</a>
+            <a href="form.html" class="nav-start-btn">Sign Out</a>
+        </nav>
     </header>
 
-
-    <!-- 🔷 PAGE BLUR STARTS HERE -->
     <div class="page-blur">
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Master Cybersecurity:<br>Fight Deepfakes & Phishing</h1>
 
+                <p>
+                    Defend against AI-driven deepfakes and phishing scams.
+                    Learn to verify, protect, and stay ahead in the digital battlefield.
+                </p>
 
-      <!-- HERO -->
-      <section class="hero">
-        <div class="hero-text">
-          <h1>Master Cybersecurity:<br>Fight Deepfakes & Phishing</h1>
+                <a href="#about" class="get-started-btn">Get Started</a>
+            </div>
+        </section>
 
-          <p>
-            Defend against AI-driven deepfakes and phishing scams.
-            Learn to verify, protect, and stay ahead in the digital battlefield.
-          </p>
+        <section id="about" class="about">
+            <h1>What is Cybersecurity?</h1>
 
-          <a href="#about" class="get-started-btn">Get Started</a>
-        </div>
-      </section>
-
-
-      <!-- ABOUT -->
-      <section id="about" class="about">
-        <h1>What is Cybersecurity?</h1>
-
-        <p>
-          Cybersecurity protects your digital life from threats like phishing and deepfakes.
-          Phishing tricks you into revealing sensitive info, while deepfakes use AI to create realistic
-          but false media. Stay vigilant with strong habits and tools to safeguard your data and identity.
-        </p>
-      </section>
-
-
-      <!-- THREATS -->
-      <section id="threats" class="threats">
-        <h2>Key Cybersecurity Threats: Focus on Deepfakes & Phishing</h2>
-
-        <div class="threat-container">
-          <div class="threat-box">
-            <h3>Phishing Attacks</h3>
             <p>
-              Fraudulent attempts to steal information via deceptive emails, texts, or sites.
-              Look for red flags like urgency, strange URLs, or unknown senders.
+                Cybersecurity protects your digital life from threats like phishing and deepfakes.
+                Phishing tricks you into revealing sensitive info, while deepfakes use AI to create realistic
+                but false media. Stay vigilant with strong habits and tools to safeguard your data and identity.
             </p>
-          </div>
+        </section>
 
-          <div class="threat-box">
-            <h3>Deepfakes</h3>
-            <p>
-              AI-generated fake media designed to mislead or impersonate. Always verify sources
-              and use detection tools for safety.
-            </p>
-          </div>
+        <section id="threats" class="threats">
+            <h2>Key Cybersecurity Threats: Focus on Deepfakes & Phishing</h2>
 
-          <div class="threat-box">
-            <h3>Related Risks: Malware & MITM</h3>
-            <p>
-              Malware often spreads through phishing links, while MITM attacks intercept your
-              communication. Awareness helps minimize these risks.
-            </p>
-          </div>
-        </div>
+            <div class="threat-container">
+                <div class="threat-box">
+                    <h3>Phishing Attacks</h3>
+                    <p>
+                        Fraudulent attempts to steal information via deceptive emails, texts, or sites.
+                        Look for red flags like urgency, strange URLs, or unknown senders.
+                    </p>
+                </div>
 
-        <!-- ⭐ SCAM ALERT VIDEOS (New Section) -->
-        <h2 class="sub-title">Scam Alert: Real-World Phishing & Fraud Cases</h2>
-        
-        <div class="video-card-container">
-        
-          <!-- SCAM VIDEO 1 -->
-          <div class="video-card">
-            <div class="video-wrapper">
-              <iframe src="https://www.youtube.com/embed/EWXVA1g95bc" title="Scam Alert Video 1" frameborder="0"
-                allowfullscreen>
-              </iframe>
-            </div>
-            <h3>Scam Alert: Beware of Modern Phishing Tactics</h3>
-            <p>A real-world breakdown of how scammers trick victims using fake messages and websites.</p>
-          </div>
-        
-          <!-- SCAM VIDEO 2 -->
-          <div class="video-card">
-            <div class="video-wrapper">
-              <iframe src="https://www.youtube.com/embed/8ixs11zpxSo" title="Scam Alert Video 2" frameborder="0"
-                allowfullscreen>
-              </iframe>
-            </div>
-            <h3>How Online Scams Fool Millions</h3>
-            <p>This report exposes how digital scams operate and how to avoid falling for them.</p>
-          </div>
-        
-          <!-- SCAM VIDEO 3 -->
-          <div class="video-card">
-            <div class="video-wrapper">
-              <iframe src="https://www.youtube.com/embed/1IFd3BeDWYQ" title="Scam Alert Video 3" frameborder="0"
-                allowfullscreen>
-              </iframe>
-            </div>
-            <h3>Phishing Scams You Should Know</h3>
-            <p>A detailed explanation of modern phishing strategies detected across social media and email.</p>
-          </div>
-        
-        </div>
+                <div class="threat-box">
+                    <h3>Deepfakes</h3>
+                    <p>
+                        AI-generated fake media designed to mislead or impersonate. Always verify sources
+                        and use detection tools for safety.
+                    </p>
+                </div>
 
+                <div class="threat-box">
+                    <h3>Related Risks: Malware & MITM</h3>
+                    <p>
+                        Malware often spreads through phishing links, while MITM attacks intercept your
+                        communication. Awareness helps minimize these risks.
+                    </p>
+                </div>
+            </div>
 
-        <!-- 📌 VIDEO CARDS: Deepfake Awareness Videos -->
+            <h2 class="sub-title">Scam Alert: Real-World Phishing & Fraud Cases</h2>
 
-        <h2 class="sub-title">Exposing Deepfakes: Know the Signs, Stay Secure</h2>
-        <div class="video-card-container">
-        
-          <!-- VIDEO 1 -->
-          <div class="video-card">
-            <div class="video-wrapper">
-              <iframe src="https://www.youtube.com/embed/cb-IaAHfn3g"
-                title="Ways to Identify AI-Generated Videos - News5 Everywhere" frameborder="0" allowfullscreen>
-              </iframe>
+            <div class="video-card-container">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/EWXVA1g95bc" title="Scam Alert Video 1" frameborder="0" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h3>Scam Alert: Beware of Modern Phishing Tactics</h3>
+                    <p>A real-world breakdown of how scammers trick victims using fake messages and websites.</p>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/8ixs11zpxSo" title="Scam Alert Video 2" frameborder="0" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h3>How Online Scams Fool Millions</h3>
+                    <p>This report exposes how digital scams operate and how to avoid falling for them.</p>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/1IFd3BeDWYQ" title="Scam Alert Video 3" frameborder="0" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h3>Phishing Scams You Should Know</h3>
+                    <p>A detailed explanation of modern phishing strategies detected across social media and email.</p>
+                </div>
             </div>
-            <h3>Mga Paraan Para Tukuyin ang AI-Generated Video</h3>
-            <p>A News5 Everywhere feature teaching viewers how to spot AI-generated and deepfake content.</p>
-          </div>
-        
-          <!-- VIDEO 2 -->
-          <div class="video-card">
-            <div class="video-wrapper">
-              <iframe src="https://www.youtube.com/embed/bGQX79VhNOY" title="Two Simple Tricks to Spot Deepfakes"
-                frameborder="0" allowfullscreen>
-              </iframe>
+
+            <h2 class="sub-title">Exposing Deepfakes: Know the Signs, Stay Secure</h2>
+            <div class="video-card-container">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/cb-IaAHfn3g" title="Ways to Identify AI-Generated Videos - News5 Everywhere" frameborder="0" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h3>Mga Paraan Para Tukuyin ang AI-Generated Video</h3>
+                    <p>A News5 Everywhere feature teaching viewers how to spot AI-generated and deepfake content.</p>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/bGQX79VhNOY" title="Two Simple Tricks to Spot Deepfakes" frameborder="0" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h3>How To Spot a Deepfake? Two Simple Tricks</h3>
+                    <p>A quick guide showing two easy ways to identify deepfakes in everyday videos.</p>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/Fyzr6jbSI_I" title="How Dangerous Is Deepfake AI? - VICE" frameborder="0" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h3>Deepfake AI – Gaano Ito Kadelikado?</h3>
+                    <p>A VICE short exploring the growing risks of deepfake AI in modern media.</p>
+                </div>
             </div>
-            <h3>How To Spot a Deepfake? Two Simple Tricks</h3>
-            <p>A quick guide showing two easy ways to identify deepfakes in everyday videos.</p>
-          </div>
-        
-          <!-- VIDEO 3 -->
-          <div class="video-card">
-            <div class="video-wrapper">
-              <iframe src="https://www.youtube.com/embed/Fyzr6jbSI_I" title="How Dangerous Is Deepfake AI? - VICE"
-                frameborder="0" allowfullscreen>
-              </iframe>
-            </div>
-            <h3>Deepfake AI – Gaano Ito Kadelikado?</h3>
-            <p>A VICE short exploring the growing risks of deepfake AI in modern media.</p>
-          </div>
-        
+
+            <h2 class="sub-title">Cyberthreat Live Map</h2>
+            <iframe src="https://cybermap.kaspersky.com/" name="cybermap" width="100%" height="500px" style="border: none;">
+            </iframe>
+        </section>
+
+        <div class="quiz">
+            <h1>Phishing Quiz</h1>
+            <iframe src="https://phishingquiz.withgoogle.com/" width="100%" height="600" style="border:none;"></iframe>
         </div>
 
-        <h2 class="sub-title">Cyberthreat Live Map</h2>
-
-    
-
-        <iframe src="https://cybermap.kaspersky.com/" name="cybermap" width="100%" height="500px" style="border: none;">
-        </iframe>
-      </section>
-
-      <div class="quiz">
-        <h1>Phishing Quiz</h1>
-
-        <iframe src="https://phishingquiz.withgoogle.com/" width="100%" height="600"
-          style="border:none;"></iframe>
-
-      </div>
-
-      <div class="deepfake">
-        <h1><br>Deepfake Detector</h1>
-        <iframe src="https://deepware.ai/" width="100%" height="600" style="border:none;"></iframe>
-      </div>
-
-      
-
-
-      <!-- TIPS -->
-      <section id="tips" class="tips">
-        <div class="tips-box">
-      
-          <h1 class="tips-title">Anti-Phishing & Anti-Deepfake Tips</h1>
-      
-          <ul class="tips-list">
-            <li><span class="check"></span> Verify sender emails and inspect links before clicking.</li>
-            <li><span class="check"></span> Use reverse image search for suspicious media.</li>
-            <li><span class="check"></span> Enable 2FA and avoid oversharing personal info.</li>
-            <li><span class="check"></span> Install antivirus and keep your software updated.</li>
-            <li><span class="check"></span> Watch for unnatural facial movements or glitches in videos.</li>
-            <li><span class="check"></span> Report phishing attempts to authorities.</li>
-          </ul>
-      
+        <div class="deepfake">
+            <h1><br>Deepfake Detector</h1>
+            <iframe src="https://deepware.ai/" width="100%" height="600" style="border:none;"></iframe>
         </div>
-      </section>
 
+        <section id="tips" class="tips">
+            <div class="tips-box">
+                <h1 class="tips-title">Anti-Phishing & Anti-Deepfake Tips</h1>
 
+                <ul class="tips-list">
+                    <li><span class="check"></span> Verify sender emails and inspect links before clicking.</li>
+                    <li><span class="check"></span> Use reverse image search for suspicious media.</li>
+                    <li><span class="check"></span> Enable 2FA and avoid oversharing personal info.</li>
+                    <li><span class="check"></span> Install antivirus and keep your software updated.</li>
+                    <li><span class="check"></span> Watch for unnatural facial movements or glitches in videos.</li>
+                    <li><span class="check"></span> Report phishing attempts to authorities.</li>
+                </ul>
+            </div>
+        </section>
 
+        <section id="tools" class="tools">
+            <h2>Additional Tips for Cybersecurity</h2>
 
+            <div class="tool-container">
+                <div class="tool-box">
+                    <h3>Phishing Detection Tools</h3>
+                    <p>
+                        Use browser extensions like uBlock Origin or services like VirusTotal
+                        to scan suspicious links and emails.
+                    </p>
+                </div>
 
-      <!-- TOOLS -->
-      <section id="tools" class="tools">
-        <h2>Additional Tips for Cybersecurity</h2>
+                <div class="tool-box">
+                    <h3>Deepfake Detectors</h3>
+                    <p>
+                        Tools like Microsoft Video Authenticator or Hive Moderation help analyze
+                        media authenticity.
+                    </p>
+                </div>
 
-        <div class="tool-container">
-
-          <div class="tool-box">
-            <h3>Phishing Detection Tools</h3>
-            <p>
-              Use browser extensions like uBlock Origin or services like VirusTotal
-              to scan suspicious links and emails.
-            </p>
-          </div>
-
-          <div class="tool-box">
-            <h3>Deepfake Detectors</h3>
-            <p>
-              Tools like Microsoft Video Authenticator or Hive Moderation help analyze
-              media authenticity.
-            </p>
-          </div>
-
-          <div class="tool-box">
-            <h3>General Security</h3>
-            <p>
-              Use password managers such as LastPass and VPNs to protect your privacy.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
+                <div class="tool-box">
+                    <h3>General Security</h3>
+                    <p>
+                        Use password managers such as LastPass and VPNs to protect your privacy.
+                    </p>
+                </div>
+            </div>
+        </section>
     </div>
-    <!-- 🔷 PAGE BLUR ENDS HERE -->
 
-
-    <!-- FOOTER -->
     <footer>
-      <div class="footer-grid">
+        <div class="footer-grid">
+            <div class="footer-left">
+                <h3>Quick Action</h3>
+                <ul>
+                    <li>
+                        <a href="https://pnp.gov.ph/" target="_blank" rel="noopener">
+                            <box-icon name="shield" color="#00ffff"></box-icon> Report Now
+                        </a>
+                    </li>
 
-        <!-- LEFT: QUICK ACTION -->
-        <div class="footer-left">
-          <h3>Quick Action</h3>
-          <ul>
-            <li>
-              <a href="https://pnp.gov.ph/" target="_blank" rel="noopener">
-                <box-icon name="shield" color="#00ffff"></box-icon> Report Now
-              </a>
-            </li>
-            
-            <li>
-              <a href="https://www.doj.gov.ph/" target="_blank" rel="noopener">
-                <box-icon name="book" color="#00ffff"></box-icon> Learn Your Rights
-              </a>
-            </li>
-            <li><a href="cysec.html"><box-icon name="lock" color="#00ffff"></box-icon> Protect My Device</a></li>
-            <li><a href="tel:911"><box-icon name="alarm" color="#00ffff"></box-icon> Emergency Help</a></li>
-          </ul>
+                    <li>
+                        <a href="https://www.doj.gov.ph/" target="_blank" rel="noopener">
+                            <box-icon name="book" color="#00ffff"></box-icon> Learn Your Rights
+                        </a>
+                    </li>
+                    <li><a href="cysec.html"><box-icon name="lock" color="#00ffff"></box-icon> Protect My Device</a></li>
+                    <li><a href="tel:911"><box-icon name="alarm" color="#00ffff"></box-icon> Emergency Help</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-center">
+                <img src="images/sparta-logo.png" class="footer-logo" alt="SpartaLexis Logo">
+                <h2 class="footer-tagline">Sparta<span class="accent">Lexis</span></h2>
+                <p class="footer-desc">Knowledge is your Shield. Awareness is your Weapon.</p>
+            </div>
+
+            <div class="footer-right">
+                <h3>Stay Updated</h3>
+                <p class="newsletter-desc">Subscribe for updates, tips, and cyber defenses.</p>
+
+                <div class="newsletter-box">
+                    <input type="email" placeholder="Your email">
+                    <button>Subscribe</button>
+                </div>
+            </div>
         </div>
 
-        <!-- CENTER: LOGO + TAGLINE -->
-        <div class="footer-center">
-          <img src="images/sparta-logo.png" class="footer-logo" alt="SpartaLexis Logo">
-          <h2 class="footer-tagline">Sparta<span class="accent">Lexis</span></h2>
-          <p class="footer-desc">Knowledge is your Shield. Awareness is your Weapon.</p>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SpartaLexis. All rights reserved. |
+                <a href="privacy.html">Privacy Policy</a>
+            </p>
+
+            <a href="#top" class="back-to-top">Back to Top ↑</a>
         </div>
-
-        <!-- RIGHT: NEWSLETTER -->
-        <div class="footer-right">
-          <h3>Stay Updated</h3>
-          <p class="newsletter-desc">Subscribe for updates, tips, and cyber defenses.</p>
-
-          <div class="newsletter-box">
-            <input type="email" placeholder="Your email">
-            <button>Subscribe</button>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2025 SpartaLexis. All rights reserved. |
-          <a href="privacy.html">Privacy Policy</a>
-        </p>
-
-        <a href="#top" class="back-to-top">Back to Top ↑</a>
-      </div>
     </footer>
 
-
-    <!-- SCRIPTS -->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
-  </body>
+    <script>
+        (function () {
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('.nav-links');
+            if (!hamburger || !nav) return;
+
+            const links = Array.from(nav.querySelectorAll('a'));
+
+            function openNav() {
+                nav.classList.add('show');
+                hamburger.setAttribute('aria-expanded', 'true');
+                nav.setAttribute('aria-hidden', 'false');
+            }
+
+            function closeNav() {
+                nav.classList.remove('show');
+                hamburger.setAttribute('aria-expanded', 'false');
+                nav.setAttribute('aria-hidden', 'true');
+            }
+
+            hamburger.addEventListener('click', (e) => {
+                const opened = nav.classList.toggle('show');
+                hamburger.setAttribute('aria-expanded', opened ? 'true' : 'false');
+                nav.setAttribute('aria-hidden', opened ? 'false' : 'true');
+            });
+
+            links.forEach((a) => {
+                a.addEventListener('click', () => {
+                    if (nav.classList.contains('show')) closeNav();
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!nav.contains(e.target) && !hamburger.contains(e.target) && nav.classList.contains('show')) {
+                    closeNav();
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && nav.classList.contains('show')) {
+                    closeNav();
+                    hamburger.focus();
+                }
+            });
+        })();
+    </script>
+</body>
 
 </html>

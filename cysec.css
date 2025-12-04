@@ -1,13 +1,9 @@
-/* ============================================================
-   GLOBAL THEME & RESET
-============================================================ */
 :root {
   --accent: #00ffff;
   --red: #D43C40;
   --white: #ffffff;
   --dark: #000000;
   --muted: rgba(255, 255, 255, 0.85);
-
   --font-main: 'Poppins', sans-serif;
   --font-heading: 'Orbitron', sans-serif;
 }
@@ -29,9 +25,6 @@ body {
   line-height: 1.7;
 }
 
-/* ============================================================
-   PAGE BLUR WRAPPER (content only, footer excluded)
-============================================================ */
 .page-blur {
   background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(12px);
@@ -41,14 +34,10 @@ body {
   margin-top: 80px;
 }
 
-/* Give all sections consistent vertical rhythm */
 .page-blur section {
   padding: 3.5rem 0;
 }
 
-/* ============================================================
-   HEADER  (same style as homepage)
-============================================================ */
 .header-bar {
   position: fixed;
   top: 0;
@@ -63,7 +52,6 @@ body {
   z-index: 1000;
 }
 
-/* logo */
 .logo {
   font-family: var(--font-heading);
   font-size: 26px;
@@ -93,7 +81,6 @@ body {
   height: auto;
 }
 
-/* nav links */
 .nav-links {
   display: flex;
   align-items: center;
@@ -118,7 +105,6 @@ body {
   padding-bottom: 3px;
 }
 
-/* Sign Out button */
 .nav-start-btn {
   background: var(--red);
   padding: 10px 18px;
@@ -133,7 +119,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* mobile menu */
 .hamburger {
   display: none;
   font-size: 28px;
@@ -142,39 +127,36 @@ body {
   border: none;
 }
 
-/* mobile layout */
 @media (max-width: 768px) {
   .hamburger {
-    display: block;
+      display: block;
   }
 
   .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    right: 0;
-    top: 70px;
-    width: 230px;
-    padding: 18px;
-    border-radius: 0 0 0 12px;
-    background: rgba(0, 0, 0, 0.95);
-    gap: 16px;
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      top: 70px;
+      width: 230px;
+      padding: 18px;
+      border-radius: 0 0 0 12px;
+      background: rgba(0, 0, 0, 0.95);
+      gap: 16px;
   }
 
   .nav-links.show {
-    display: flex;
+      display: flex;
   }
 }
 
-/* ============================================================
-   HERO  (glass card, glow, matches team style)
-============================================================ */
 .hero {
   min-height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 50px;
 }
 
 .hero-text {
@@ -208,7 +190,6 @@ body {
   transform: translateY(-5px);
 }
 
-/* CTA button */
 .get-started-btn {
   display: inline-block;
   padding: 0.8rem 2.1rem;
@@ -230,9 +211,6 @@ body {
   box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
 }
 
-/* ============================================================
-   HEADINGS / COPY
-============================================================ */
 h1,
 h2 {
   font-family: var(--font-heading);
@@ -244,29 +222,17 @@ h2 {
 
 .about {
   text-align: center;
-  /* center title + paragraph */
-  padding: 3rem 8%;
-  /* better spacing */
+  padding: 3rem 10%;
 }
 
 .about p {
   font-size: 1.25rem;
-  /* readable size */
   line-height: 1.8;
-  /* breathing room */
   max-width: 900px;
-  /* keep the paragraph neat */
   margin: 0 auto 1.5rem;
-  /* center with spacing */
   color: #e6f4ff;
-  /* softer white for readability */
 }
 
-
-
-/* ============================================================
-   THREAT + TOOL CARDS (shared style)
-============================================================ */
 .threat-container,
 .tool-container {
   display: grid;
@@ -291,7 +257,6 @@ h2 {
   overflow: hidden;
 }
 
-/* soft glow sweep on hover */
 .threat-box::before,
 .tool-box::before {
   content: "";
@@ -300,9 +265,7 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom,
-      rgba(0, 255, 255, 0.2),
-      rgba(0, 255, 255, 0));
+  background: linear-gradient(to bottom, rgba(0, 255, 255, 0.2), rgba(0, 255, 255, 0));
   opacity: 0;
   transition: 0.4s;
 }
@@ -320,7 +283,6 @@ h2 {
   border-color: rgba(0, 255, 255, 0.5);
 }
 
-/* pseudo “icon” circle at top */
 .threat-box::after,
 .tool-box::after {
   content: "";
@@ -349,16 +311,12 @@ h2 {
   opacity: 0.95;
 }
 
-/* ============================================================
-   KASPERSKY MAP FRAME
-============================================================ */
 .threats iframe {
   margin-top: 2.5rem;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
 }
-
 
 .quiz iframe,
 .deepfake iframe {
@@ -374,22 +332,12 @@ h2 {
   text-align: center;
 }
 
-
-
-/* ============================================================
-   TIPS SECTION
-============================================================ */
-/* === FIXED TIP BOX DESIGN (Matches DigiLexis & Team Style) === */
-/* -------- Neon Animated Checkbox Icons -------- */
-
-/* Wrapper */
 .tips {
   display: flex;
   justify-content: center;
   margin-top: 4rem;
 }
 
-/* Card */
 .tips-box {
   background: rgba(8, 16, 35, 0.85);
   backdrop-filter: blur(12px);
@@ -397,14 +345,11 @@ h2 {
   padding: 3rem;
   width: 90%;
   max-width: 900px;
-
   text-align: center;
-
   border: 1px solid rgba(0, 255, 255, 0.25);
   box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
 }
 
-/* Title */
 .tips-title {
   font-family: var(--font-heading);
   color: #00d8ff;
@@ -412,7 +357,6 @@ h2 {
   margin-bottom: 2rem;
 }
 
-/* List */
 .tips-list {
   list-style: none;
   padding: 0;
@@ -425,7 +369,6 @@ h2 {
   display: flex;
   align-items: center;
   gap: 10px;
-
   margin-bottom: 1rem;
   font-size: 1.05rem;
   color: #eaf6ff;
@@ -436,43 +379,42 @@ h2 {
   color: #00ffff;
 }
 
-/* Checkbox */
 .check {
-  width: 20px;
-  height: 20px;
-  border: 2px solid #00ffff;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--accent);
   border-radius: 4px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  transition: 0.3s ease;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   box-shadow: 0 0 6px rgba(0, 255, 255, 0.3);
 }
 
-/* Hover glow */
 .tips-list li:hover .check {
-  background: #00ffff;
-  transform: scale(1.2);
+  background: var(--accent);
+  transform: scale(1.08);
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
 }
 
-/* Animated checkmark */
 .check::after {
   content: "";
-  position: absolute;
-  top: 2px;
-  left: 6px;
-  width: 6px;
+  width: 8px;
   height: 12px;
-  border-right: 3px solid transparent;
-  border-bottom: 3px solid transparent;
+  display: block;
+  border-right: 2.6px solid transparent;
+  border-bottom: 2.6px solid transparent;
   transform: rotate(45deg);
   opacity: 0;
-  transition: 0.25s;
+  transition: opacity 0.18s ease, border-color 0.18s ease;
+  transform-origin: center;
 }
 
 .tips-list li:hover .check::after {
-  border-right: 3px solid #081023;
-  border-bottom: 3px solid #081023;
+  border-right: 2.6px solid #081023;
+  border-bottom: 2.6px solid #081023;
   opacity: 1;
 }
 
@@ -486,9 +428,6 @@ h2 {
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
 }
 
-/* ============================================================
-   VIDEO CARDS — MATCH THREAT/TOOL DESIGN
-============================================================ */
 .video-card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -510,14 +449,12 @@ h2 {
   overflow: hidden;
 }
 
-/* Hover glow */
 .video-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 0 30px rgba(0, 255, 255, 0.35);
   border-color: rgba(0, 255, 255, 0.45);
 }
 
-/* Title */
 .video-card h3 {
   color: #00d8ff;
   font-family: 'Poppins', sans-serif;
@@ -526,14 +463,12 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* Description */
 .video-card p {
   font-size: 16px;
   color: #d9eaff;
   opacity: 0.95;
 }
 
-/* Video frame */
 .video-wrapper {
   width: 100%;
   height: 200px;
@@ -548,16 +483,12 @@ h2 {
   border: none;
 }
 
-/* Mobile */
 @media (max-width: 850px) {
   .video-wrapper {
-    height: 180px;
+      height: 180px;
   }
 }
 
-/* ============================================================
-   FOOTER (same layout as homepage)
-============================================================ */
 footer {
   background: url("images/footer.jpg") center/cover;
   padding: 0.3rem 0 0.3rem;
@@ -575,7 +506,6 @@ footer::before {
   z-index: -1;
 }
 
-/* LAYOUT: 3 COLUMNS BALANCED */
 .footer-grid {
   max-width: 1200px;
   margin: auto;
@@ -586,7 +516,6 @@ footer::before {
   gap: 2rem;
 }
 
-/* LEFT COLUMN: QUICK ACTION */
 .footer-left h3,
 .footer-right h3 {
   font-family: var(--font-heading);
@@ -617,7 +546,6 @@ footer::before {
   color: var(--accent);
 }
 
-/* CENTER: LOGO + TAGLINE */
 .footer-center {
   text-align: center;
   margin-top: -0.5rem;
@@ -641,7 +569,6 @@ footer::before {
   margin-bottom: 10px;
 }
 
-/* RIGHT COLUMN: NEWSLETTER */
 .footer-right {
   text-align: right;
 }
@@ -678,10 +605,7 @@ footer::before {
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .newsletter-box button:hover {
@@ -690,7 +614,6 @@ footer::before {
   box-shadow: 0 0 16px rgba(0, 255, 255, 0.7);
 }
 
-/* COPYRIGHT */
 .footer-bottom {
   text-align: center;
   margin-top: 0.3rem;
@@ -714,9 +637,6 @@ footer::before {
   color: var(--accent);
 }
 
-/* ============================================================
-   SCROLL REVEAL ANIMATION
-============================================================ */
 .reveal {
   opacity: 0;
   transform: translateY(22px);
@@ -728,58 +648,53 @@ footer::before {
   transform: translateY(0);
 }
 
-/* ============================================================
-   RESPONSIVE
-============================================================ */
 @media (max-width: 900px) {
   .hero-text {
-    padding: 2.4rem 2rem;
+      padding: 2.4rem 2rem;
   }
 }
 
 @media (max-width: 850px) {
-
-  /* STACK FOOTER IN THE CORRECT ORDER */
   .footer-grid {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 0 8%;
-    gap: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 0 8%;
+      gap: 1.5rem;
   }
 
   .footer-right,
   .newsletter-desc {
-    text-align: center;
-    margin: auto;
+      text-align: center;
+      margin: auto;
   }
 
   .newsletter-box {
-    flex-direction: column;
-    align-items: center;
+      flex-direction: column;
+      align-items: center;
   }
 
   .newsletter-box input {
-    width: 100%;
-    max-width: 260px;
+      width: 100%;
+      max-width: 260px;
   }
 
   .footer-center .footer-logo {
-    width: 120px;
-    margin: auto;
+      width: 120px;
+      margin: auto;
   }
 
   .footer-tagline {
-    font-size: 1.7rem;
-    letter-spacing: 2px;
+      font-size: 1.7rem;
+      letter-spacing: 2px;
   }
 
   .footer-bottom {
-    margin-top: 0.5rem;
+      margin-top: 0.5rem;
   }
 
   .back-to-top {
-    display: block;
-    margin-top: 6px;
+      display: block;
+      margin-top: 6px;
   }
 }

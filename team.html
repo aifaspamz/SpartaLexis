@@ -4,34 +4,22 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-      content="Meet the talented team behind SpartaLexis, including UI/UX designers, web developers, and content creators driving innovation in digital and cyber solutions.">
-    <meta property="og:title" content="Our Team | SpartaLexis">
-    <meta property="og:description"
-      content="Discover the experts at SpartaLexis who are shaping the future of DigiLexis and CyberLexis.">
-    <meta property="og:image" content="images/sparta-logo.png">
-    <meta property="og:url" content="https://www.spartalexis.com/team.html">
-
     <title>Our Team | SpartaLexis</title>
-
-    <!-- FONTS + ICONS + CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="team.css">
   </head>
 
   <body>
 
-    <!-- HEADER -->
     <header class="header-bar">
       <a href="index.html" class="logo">
         <img src="images/sparta-logo.png" alt="SpartaLexis Logo">
         <span class="logo-text">Sparta<span class="accent">Lexis</span></span>
       </a>
 
-      <button class="hamburger" aria-label="Menu">☰</button>
+      <button class="hamburger" aria-label="Menu" aria-controls="primary-navigation" aria-expanded="false">☰</button>
 
       <nav class="nav-links">
         <a href="index.html">Home</a>
@@ -43,19 +31,15 @@
     </header>
 
 
-    <!-- 🔷🔷 PAGE BLUR STARTS HERE 🔷🔷 -->
     <div class="page-blur">
 
-      <!-- INTRO SECTION -->
       <section class="intro-section">
         <h1>Meet Our Team!</h1>
         <p>The passionate professionals behind SpartaLexis, driving innovation in digital and cyber solutions.</p>
       </section>
 
-      <!-- MAIN CONTENT -->
       <main class="main-container">
 
-        <!-- CORE VALUES -->
         <section class="team-values">
           <h2>Our Core Values</h2>
           <p>
@@ -64,12 +48,10 @@
           </p>
         </section>
 
-        <!-- TEAM CARDS -->
         <section class="team-cards" aria-labelledby="team-heading">
 
           <h2 id="team-heading" class="sr-only">Team Members</h2>
 
-          <!-- CARD 1 -->
           <div class="card">
             <div class="content">
               <div class="imgBox">
@@ -95,7 +77,6 @@
             </ul>
           </div>
 
-          <!-- CARD 2 -->
           <div class="card">
             <div class="content">
               <div class="imgBox">
@@ -121,7 +102,6 @@
             </ul>
           </div>
 
-          <!-- CARD 3 -->
           <div class="card">
             <div class="content">
               <div class="imgBox">
@@ -150,7 +130,6 @@
         </section>
 
 
-        <!-- CONTACT FORM -->
         <section id="contact" class="contact-form">
           <h2>Contact Us</h2>
           <p>Have questions or want to get in touch? Fill out the form below.</p>
@@ -174,10 +153,8 @@
       </main>
 
     </div>
-    <!-- 🔷🔷 PAGE BLUR ENDS HERE 🔷🔷 -->
 
 
-    <!-- FOOTER (NOT BLURRED for clarity) -->
     <footer>
       <div class="footer-grid">
 
@@ -228,6 +205,47 @@
     </footer>
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <script>
+      (function () {
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav-links');
+        if (!hamburger || !nav) return;
+
+        const links = Array.from(nav.querySelectorAll('a'));
+
+        function closeNav() {
+          nav.classList.remove('show');
+          hamburger.setAttribute('aria-expanded', 'false');
+          nav.setAttribute('aria-hidden', 'true');
+        }
+
+        hamburger.addEventListener('click', (e) => {
+          const opened = nav.classList.toggle('show');
+          hamburger.setAttribute('aria-expanded', opened ? 'true' : 'false');
+          nav.setAttribute('aria-hidden', opened ? 'false' : 'true');
+        });
+
+        links.forEach((a) => {
+          a.addEventListener('click', () => {
+            if (nav.classList.contains('show')) closeNav();
+          });
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!nav.contains(e.target) && !hamburger.contains(e.target) && nav.classList.contains('show')) {
+            closeNav();
+          }
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && nav.classList.contains('show')) {
+            closeNav();
+            hamburger.focus();
+          }
+        });
+      })();
+    </script>
 
   </body>
 
