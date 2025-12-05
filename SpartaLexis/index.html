@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage | SpartaLexis</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header class="header-bar">
+      <a href="index.html" class="logo">
+        <img src="images/sparta-logo.png" alt="SpartaLexis Logo">
+        <span class="logo-text">Sparta<span class="accent">Lexis</span></span>
+      </a>
+
+      <button class="hamburger" aria-label="Menu" aria-controls="primary-navigation" aria-expanded="false">☰</button>
+
+      <nav id="primary-navigation" class="nav-links" aria-hidden="true">
+        <a href="#" class="active">Home</a>
+        <a href="digilit.html">DigiLexis</a>
+        <a href="cysec.html">CyberLexis</a>
+        <a href="team.html">Our Team</a>
+        <a href="form.html" class="nav-start-btn">Sign Out</a>
+      </nav>
+    </header>
+
+
+    <div class="page-blur">
+
+      <section class="hero">
+        <div class="hero-inner">
+          <h1 class="tagline">
+            Sparta<span class="accent">Lexis</span>:<br>
+            Knowledge is your Shield.<br>
+            Awareness is your Weapon.
+          </h1>
+
+          <p>
+            <br>In an era defined by AI misinformation and advanced social engineering,
+            <strong>SpartaLexis</strong> provides the users <strong>(Spartan)</strong> discipline and precise knowledge
+            <strong>(Lexis)</strong> needed for online survival. We cut through the confusion of deepfakes and expose
+            the
+            tactics of phishing scams, equipping you with critical literacy to verify information, secure your data, and
+            recognize threats before they strike.
+          </p>
+
+          <div class="hero-btns">
+            <a href="cysec.html" class="cta start-learning">Start Learning</a>
+            <a href="#features" class="cta secondary">Learn More</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="offers-section">
+        <h2>What SpartaLexis Offers</h2>
+
+        <div class="offers-container">
+
+          <div class="offer-card">
+            <h3>Digital Literacy Mastery</h3>
+            <p>
+              Learn the essentials of navigating the digital world safely and responsibly.
+              From evaluating online information to understanding digital footprints, our contents will help you think critically,
+              communicate clearly, and use technology with confidence.
+            </p>
+          </div>
+
+          <div class="offer-card">
+            <h3>Anti-Phishing Awareness Training</h3>
+            <p>
+              Protect yourself from online scams, deceptive messages, and malicious links.
+              SpartaLexis teaches you how to spot red flags, analyze suspicious emails, and avoid common tactics used by
+              cybercriminals — turning you into a scam-proof Spartan.
+            </p>
+          </div>
+
+          <div class="offer-card">
+            <h3>Anti-Deepfake Detection Skills</h3>
+            <p>
+              Deepfakes are everywhere — but you can fight back.
+              Our lessons show you how to identify manipulated photos, videos, and audio using visual cues, behavioral
+              inconsistencies, and verification tools used by real cybersecurity analysts.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="testimonials-section">
+        <h2>What Our Spartans Say</h2>
+
+        <div class="testimonial-container">
+
+          <blockquote>
+            “Akala ko dati deepfake lang yung mga lolang nagmumura sa TikTok.
+            Hahahahaha thnx, SpartaLexis!”
+            <cite>- Charlyz G., CS 1102 Student</cite>
+          </blockquote>
+
+          <blockquote>
+            "Grabe, dahil sa SpartaLexis, hindi na ako nabibiktima ng ‘FREE iPhone’ scams. Ngayon, ako na yung nangsscam..."
+            <cite>- Anthony S., CS 1102 Student</cite>
+          </blockquote>
+
+        </div>
+      </section>
+
+    </div>
+
+
+    <footer>
+      <div class="footer-grid">
+
+        <div class="footer-left">
+          <h3>Quick Action</h3>
+          <ul>
+            <li>
+              <a href="https://pnp.gov.ph/" target="_blank" rel="noopener">
+                <box-icon name="shield" color="#00ffff"></box-icon> Report Now
+              </a>
+            </li>
+            
+            <li>
+              <a href="https://www.doj.gov.ph/" target="_blank" rel="noopener">
+                <box-icon name="book" color="#00ffff"></box-icon> Learn Your Rights
+              </a>
+            </li>
+            <li><a href="cysec.html"><box-icon name="lock" color="#00ffff"></box-icon> Protect My Device</a></li>
+            <li><a href="tel:911"><box-icon name="alarm" color="#00ffff"></box-icon> Emergency Help</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-center">
+          <img src="images/sparta-logo.png" class="footer-logo" alt="SpartaLexis Logo">
+          <h2 class="footer-tagline">Sparta<span class="accent">Lexis</span></h2>
+          <p class="footer-desc">Knowledge is your Shield. Awareness is your Weapon.</p>
+        </div>
+
+        <div class="footer-right">
+          <h3>Stay Updated</h3>
+          <p class="newsletter-desc">
+            Subscribe for updates, tips, and cyber defenses.
+          </p>
+
+          <div class="newsletter-box">
+            <input type="email" placeholder="Your email">
+            <button>Subscribe</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 SpartaLexis. All rights reserved. |
+          <a href="#">Privacy Policy</a>
+        </p>
+
+        <a href="#top" class="back-to-top">Back to Top ↑</a>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <script>
+      (function () {
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav-links');
+        if (!hamburger || !nav) return;
+
+        const links = Array.from(nav.querySelectorAll('a'));
+
+        function openNav() {
+          nav.classList.add('show');
+          hamburger.setAttribute('aria-expanded', 'true');
+          nav.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeNav() {
+          nav.classList.remove('show');
+          hamburger.setAttribute('aria-expanded', 'false');
+          nav.setAttribute('aria-hidden', 'true');
+        }
+
+        hamburger.addEventListener('click', (e) => {
+          const opened = nav.classList.toggle('show');
+          hamburger.setAttribute('aria-expanded', opened ? 'true' : 'false');
+          nav.setAttribute('aria-hidden', opened ? 'false' : 'true');
+        });
+
+        links.forEach((a) => {
+          a.addEventListener('click', () => {
+            if (nav.classList.contains('show')) closeNav();
+          });
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!nav.contains(e.target) && !hamburger.contains(e.target) && nav.classList.contains('show')) {
+            closeNav();
+          }
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && nav.classList.contains('show')) {
+            closeNav();
+            hamburger.focus();
+          }
+        });
+      })();
+    </script>
+
+
+  </body>
+
+</html>
