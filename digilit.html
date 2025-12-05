@@ -64,7 +64,7 @@
 
                     <div class="content-side">
                         <h2>What is Digital Literacy?</h2>
-                        <p>Digital literacy is the ability to use technology safely, responsibly, and effectively. It’s not just about using devices — it’s about navigating the digital world with confidence, communicating clearly, and making informed decisions.</p>
+                        <p>Digital literacy is the ability to use technology safely, responsibly, and effectively. It is not just about using devices like computers, tablets, or smartphones. It means knowing how digital tools work, finding reliable information, protecting personal data, and staying safe online. People with strong digital literacy can spot false information, avoid online dangers, and make smart choices. It also helps with clear communication, working with others online, and using digital content responsibly, like giving credit when sharing. Studies show that students and professionals with higher digital literacy perform better in research, problem-solving, and collaborative projects. These skills are important for learning, jobs, and taking part in today’s digital world, where technology is used for education, business, communication, and entertainment.</p>
                     </div>
                 </section>
 
@@ -75,7 +75,7 @@
 
                     <div class="content-side">
                         <h2>Why is Digital Literacy Important?</h2>
-                        <p>Digital literacy empowers people to use technology effectively and safely. It helps users identify trustworthy information, avoid online scams, and think critically before sharing anything.</p>
+                        <p>Digital literacy is important because it helps people use technology confidently and access reliable information for learning. Research shows that individuals with strong digital literacy skills are better at evaluating sources and identifying credible content, which improves academic performance and lifelong learning. It enhances research skills by teaching people how to search effectively, filter relevant information, and organize knowledge efficiently. Digital literacy also strengthens safety awareness, enabling users to protect personal data, create strong passwords, and avoid phishing attacks or malware. In today’s connected world, these skills are essential not only for education but also for professional success, responsible citizenship, and safe participation in online communities.</p>
                     </div>
                 </section>
 
@@ -184,7 +184,7 @@
 
             <div class="footer-bottom">
                 <p>&copy; 2025 SpartaLexis. All rights reserved. |
-                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="#">Privacy Policy</a>
                 </p>
 
                 <a href="#top" class="back-to-top">Back to Top ↑</a>
@@ -193,52 +193,60 @@
 
         <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
-        <script>
-          (function () {
-            const hamburger = document.querySelector('.hamburger');
-            const nav = document.querySelector('.nav-links');
-            if (!hamburger || !nav) return;
+<script>
+    // Ensure the script only runs after all HTML elements are loaded
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav-links');
 
-            const links = Array.from(nav.querySelectorAll('a'));
+        // Check if elements were successfully found
+        if (!hamburger || !nav) {
+            console.error('Hamburger button or nav links element not found.');
+            return;
+        }
 
-            function openNav() {
-              nav.classList.add('show');
-              hamburger.setAttribute('aria-expanded', 'true');
-              nav.setAttribute('aria-hidden', 'false');
+        // 1. Add click listener to the hamburger button
+        hamburger.addEventListener('click', () => {
+            // Toggle the 'show' class to trigger CSS visibility
+            const opened = nav.classList.toggle('show');
+            
+            // Toggle the ARIA attributes for accessibility
+            hamburger.setAttribute('aria-expanded', opened ? 'true' : 'false');
+            nav.setAttribute('aria-hidden', opened ? 'false' : 'true');
+        });
+
+        // 2. Close the navigation when a link inside it is clicked
+        const links = Array.from(nav.querySelectorAll('a'));
+        links.forEach((a) => {
+            a.addEventListener('click', () => {
+                if (nav.classList.contains('show')) {
+                    nav.classList.remove('show');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    nav.setAttribute('aria-hidden', 'true');
+                }
+            });
+        });
+
+        // 3. Close the navigation when clicking outside the menu (Document click)
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !hamburger.contains(e.target) && nav.classList.contains('show')) {
+                nav.classList.remove('show');
+                hamburger.setAttribute('aria-expanded', 'false');
+                nav.setAttribute('aria-hidden', 'true');
             }
+        });
 
-            function closeNav() {
-              nav.classList.remove('show');
-              hamburger.setAttribute('aria-expanded', 'false');
-              nav.setAttribute('aria-hidden', 'true');
-            }
-
-            hamburger.addEventListener('click', (e) => {
-              const opened = nav.classList.toggle('show');
-              hamburger.setAttribute('aria-expanded', opened ? 'true' : 'false');
-              nav.setAttribute('aria-hidden', opened ? 'false' : 'true');
-            });
-
-            links.forEach((a) => {
-              a.addEventListener('click', () => {
-                if (nav.classList.contains('show')) closeNav();
-              });
-            });
-
-            document.addEventListener('click', (e) => {
-              if (!nav.contains(e.target) && !hamburger.contains(e.target) && nav.classList.contains('show')) {
-                closeNav();
-              }
-            });
-
-            document.addEventListener('keydown', (e) => {
-              if (e.key === 'Escape' && nav.classList.contains('show')) {
-                closeNav();
+        // 4. Close the navigation when the Escape key is pressed
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && nav.classList.contains('show')) {
+                nav.classList.remove('show');
+                hamburger.setAttribute('aria-expanded', 'false');
+                nav.setAttribute('aria-hidden', 'true');
                 hamburger.focus();
-              }
-            });
-          })();
-        </script>
+            }
+        });
+    });
+</script>
     </body>
 
 </html>

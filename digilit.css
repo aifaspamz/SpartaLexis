@@ -206,18 +206,20 @@ h2,
 
 .content-side {
   max-width: 600px;
+  text-align: left;
 }
 
 .content-side h2 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-  color: #00D0FF;
+  font-size: 36px;
+  font-weight: 800;
+  color: #00d8ff;
+  margin-bottom: 15px;
 }
 
 .content-side p {
   font-size: 18px;
-  margin-bottom: 14px;
-  opacity: 0.9;
+  line-height: 1.85;
+  margin-bottom: 20px;
 }
 
 .digital-list {
@@ -225,18 +227,30 @@ h2,
 }
 
 .bottom-card-container {
-  margin-top: 100px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
-  padding: 0 35px 35px 35px;
+  flex-wrap: wrap;
+  margin: 100px auto;
+  width: 100%;
+  padding: 0 20px;
 }
 
+.big-card {
+  width: 340px;
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 26px;
+  padding-bottom: 22px;
+  backdrop-filter: blur(22px);
+  border: 2px solid rgba(255, 255, 255, 0.32);
+  text-align: center;
+  transition: 0.4s ease;
+  overflow: hidden;
+}
 
 .big-card:hover {
-  transform: translateY(-12px) scale(1.04);
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.45);
+  transform: translateY(-14px) scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.45);
 }
 
 .card-img {
@@ -245,20 +259,20 @@ h2,
   object-fit: cover;
   border-bottom: 3px solid rgba(255, 255, 255, 0.35);
   filter: brightness(1.1);
-  display: block;
 }
 
 .big-card h3 {
-  margin: 18px;
-  font-size: 22px;
-  color: var(--accent);
-  font-family: var(--font-heading);
+  font-size: 24px;
+  margin: 18px 0 10px;
+  font-weight: 800;
+  color: #00d8ff;
 }
 
 .big-card p {
-  padding: 0 18px 15px;
-  font-size: 16px;
-  opacity: 0.9;
+  font-size: 15px;
+  text-align: justify;
+  opacity: 0.92;
+  padding: 0 15px 15px;
 }
 
 .tips-section {
